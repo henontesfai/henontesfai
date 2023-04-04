@@ -1,0 +1,300 @@
+body {
+  font-family: Arial, sans-serif;
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.main-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+    a {
+    text-decoration: none;
+    }
+    
+    li {
+    list-style: none;
+    }
+
+  .page-section {
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 80%;
+    margin: 0 auto 20px auto;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    gap: 20px;
+  }
+  
+  .project-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background-color: rgba(34, 49, 63, 0.8); /* Change the background color and make it semi-transparent */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Increase the shadow for a better 3D effect */
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increase the shadow for a better 3D effect on hover */
+    background-color: rgba(34, 49, 63, 0.9); /* Make the background color slightly darker on hover */
+  }
+  
+  .project-card img {
+    width: 100%; /* Set the width to 100% */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain the aspect ratio of the image and cover the entire space */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff; /* Change the title color to white */
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .view-project-btn {
+    background-color: #3498db; /* Change the button color to a brighter shade of blue */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .view-project-btn:hover {
+    background-color: #2980b9; /* Change the button color to a slightly darker shade on hover */
+  }
+  
+  
+ /* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: transparent; /* make the background transparent */
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+  
+  /* LOGO */
+  
+  .logo {
+  font-size: 32px;
+  }
+  
+  /* NAVBAR MENU */
+  .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  }
+  
+  .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* change the hover background color to a transparent white */
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  .menu li {
+  padding: 5px 14px;
+  }
+  
+  
+  /* DROPDOWN MENU */
+  
+  .projects {
+  position: relative; 
+  }
+  
+  .dropdown {
+    background-color: rgba(28, 40, 51, 0.9); /* use a semi-transparent background color */
+    padding: 1em 0;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+    left: 0;
+    width: 120px;
+  }
+  
+  .dropdown li + li {
+  margin-top: 10px;
+  }
+  
+  .dropdown li {
+  padding: 0.5em 1em;
+  width: auto;
+  text-align: left;
+  }
+
+  .dropdown li:hover {
+    background-color: rgba(93, 173, 226, 0.5); /* change the hover background color to a semi-transparent blue */
+  }
+  
+  .projects:hover .dropdown {
+  display: block;
+  }
+
+  
+
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    
+    .language-link {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 28px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .language-link[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    
+    .flag-en {
+      background-image: url('https://flagcdn.com/80x60/gb.png'); /* Higher resolution flag image */
+    }
+    
+    .flag-sv {
+      background-image: url('https://flagcdn.com/80x60/se.png'); /* Higher resolution flag image */
+    }
+    
+    .flag-en,
+    .flag-sv {
+      background-size: 40px 28px; /* Adjust the background-size */
+      background-repeat: no-repeat;
+    }
+
+   
+    /* Add this media query to your existing CSS */
+/* Extra Small devices (phones, up to 575px) */
+@media (max-width: 575px) {
+  .project-card {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) {
+  .project-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .projects:hover .dropdown {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+    display: none;
+    }
+    }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  .project-card {
+    flex: 0 0 calc(25% - 20px);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .project-card {
+    flex: 0 0 calc(20% - 20px);
+  }
+}
+
+
