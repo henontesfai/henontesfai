@@ -1,6 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  font-family: cursive;
+  font-family: 'Roboto', sans-serif; /* Replace cursive with 'Roboto' */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -246,86 +245,95 @@ body {
   transition: background-color 0.3s ease;
 }
   
-@media (max-width: 576px) {
-  h1 {
+@media (max-width: 575px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
     font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    justify-content: center; /* Add this line */
   }
 
   .menu {
+    display: none;
     flex-direction: column;
-    gap: 0.5em;
   }
 
-  .menu li {
-    padding: 5px 0;
+  .menu.open {
+    display: flex;
   }
 
-  .dropdown {
-    width: 100%;
-    top: 0;
-    left: 0;
+  .projects:hover .dropdown {
+    display: none;
   }
 
-  .language-selector {
-    justify-content: center;
-    margin-top: 10px;
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu {
+    font-size: 14px;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  button {
+    margin: 8px 0;
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
 
-
-/* Tablets (medium screens) */
-@media (min-width: 577px) and (max-width: 992px) {
-  h1 {
-    font-size: 30px;
-    margin-bottom: 25px;
-  }
-
-  main {
-    padding: 40px;
+/* Small devices (portrait tablets and large phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
   }
 
   .menu {
-    gap: 0.8em;
+    display: none;
+    flex-direction: column;
   }
 
-  .menu li {
-    padding: 5px 10px;
+  .menu.open {
+    display: flex;
   }
-} 
-   /* Add this media query to your existing CSS */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      font-size: 24px;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-    }
-  
-    .menu.open {
-      display: flex;
-    }
-  
-    .projects:hover .dropdown {
-      display: none;
-    }
+
+  .projects:hover .dropdown {
+    display: none;
   }
-  
-  @media (min-width: 769px) {
-      .hamburger {
-      display: none;
-      }
-      }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .projects:hover .dropdown {
+    display: block;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .menu {
+    font-size: 18px;
+  }
+}

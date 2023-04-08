@@ -1,6 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  font-family: cursive;
+  font-family: 'Roboto', sans-serif; /* Replace cursive with 'Roboto' */
   margin: 0;
   padding: 0;
   overflow: hidden;
