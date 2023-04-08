@@ -258,6 +258,7 @@ body {
 
   .navbar {
     flex-direction: column;
+    justify-content: center; /* Add this line */
   }
 
   .menu {
@@ -280,6 +281,7 @@ body {
     margin-top: 10px;
   }
 }
+
 
 /* Tablets (medium screens) */
 @media (min-width: 577px) and (max-width: 992px) {
