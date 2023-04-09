@@ -52,7 +52,6 @@ body {
 
       strong {
         display: inline-block;
-        width: 100px;
         font-weight: bold;
         color: #333;
       }
@@ -257,7 +256,7 @@ body {
     flex-direction: column;
   }
 
-  .menu.open {
+  .open.menu {
     display: flex;
   }
 
@@ -297,7 +296,7 @@ body {
     flex-direction: column;
   }
 
-  .menu.open {
+  .open.menu {
     display: flex;
   }
 
@@ -335,5 +334,11 @@ body {
 
   .menu {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  strong {
+    width: 100px;
   }
 }
