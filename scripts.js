@@ -7,7 +7,7 @@ document.getElementById('hamburger').addEventListener('click', function () {
 
 function downloadResume() {
   // Replace this URL with the actual resume file URL.
-  const resumeURL = 'https://henontesfai.github.io/henontesfai/assets/resumeHT.pdf';
+  const resumeURL = 'https://henontesfai.github.io/henontesfai/assets/resumeHenonTesfai.pdf';
   const link = document.createElement('a');
   link.href = resumeURL;
   link.download = 'resume.pdf';
@@ -18,6 +18,6 @@ function downloadResume() {
 
 function viewResume() {
   // Replace this URL with the actual resume file URL.
-  const resumeURL = 'https://henontesfai.github.io/henontesfai/assets/resumeHT.pdf';
+  const resumeURL = 'https://henontesfai.github.io/henontesfai/assets/resumeHenonTesfai.pdf';
   window.open(resumeURL, '_blank');
 };
